@@ -4,11 +4,13 @@
 #
 Name     : mvn-maven-plugin-testing
 Version  : 1.3
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3/maven-plugin-testing-harness-1.3.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3/maven-plugin-testing-harness-1.3.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3/maven-plugin-testing-harness-1.3.pom
-Source2  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing/1.3/maven-plugin-testing-1.3.pom
+Source2  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1.jar
+Source3  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1.pom
+Source4  : https://repo1.maven.org/maven2/org/apache/maven/plugin-testing/maven-plugin-testing/1.3/maven-plugin-testing-1.3.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -36,8 +38,14 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing/1.3
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing/1.3
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing/1.3
 
 
 %files
@@ -47,4 +55,6 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/plugin
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3/maven-plugin-testing-harness-1.3.jar
 /usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/1.3/maven-plugin-testing-harness-1.3.pom
+/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1.jar
+/usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1.pom
 /usr/share/java/.m2/repository/org/apache/maven/plugin-testing/maven-plugin-testing/1.3/maven-plugin-testing-1.3.pom
